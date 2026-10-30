@@ -14,10 +14,12 @@ SELECT
 FROM vacancies
 WHERE regexp_matches(
         name,
-        'android|mobile|мобильн|flutter|react[ -]?native|kotlin multiplatform|(^|[^a-z])(ios|swift|kmp)([^a-z]|$)',
+        'android|mobile|мобильн|flutter|react[ -]?native|kotlin multiplatform'
+        || '|(^|[^a-z])(ios|swift|kmp)([^a-z]|$)',
         'i')
   AND NOT regexp_matches(
         name,
-        'тестир|аналитик|analyst|дизайн|design|автомобил|менеджер|manager|руководитель проект|преподава|sdet|in test|(^|[^a-z])qa([^a-z]|$)',
+        'тестир|аналитик|analyst|дизайн|design|автомобил|менеджер|manager'
+        || '|руководитель проект|преподава|sdet|in test|(^|[^a-z])qa([^a-z]|$)',
         'i')
   AND list_has_any(list_transform(professional_roles, lambda r: r.id), ['96', '104']);

@@ -14,11 +14,14 @@
 | `hhlake/mr_skills.py` | навыки, пары и тройки навыков варианта на MapReduce |
 | `hhlake/duckdb_skills.py`, `sql/` | то же на DuckDB SQL по тому же объекту |
 | `hhlake/verify.py` | построчное сравнение результатов двух движков |
+| `scripts/failover_test.ps1` | падение двух мапперов, перезапуск и сверка результата с DuckDB |
+| `scripts/chunk_test.ps1` | прогон MapReduce с разными размерами чанка и сверка с DuckDB |
 | `hhlake/combinatorics.py` | объяснение роста числа пар и троек через C(k, n) |
 | `hhlake/salary.py`, `sql/salary.sql` | влияние пар и троек навыков на медианную зарплату |
 | `hhlake/regions.py`, `sql/regions.sql` | сравнение Москвы, Санкт-Петербурга и Краснодара |
 | `hhlake/curate.py`, `sql/curate.sql` | curated-слой (Parquet и узкий NDJSON) для оптимизации |
 | `hhlake/profiler.py`, `scripts/profile.ps1` | профилирование времени и пиковой памяти дерева процессов |
+| `scripts/verify_profile.ps1` | сверка результатов всех профилируемых конфигураций с эталоном |
 
 ## Запуск
 
