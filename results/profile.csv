@@ -1,0 +1,36 @@
+name,run,seconds,compute_seconds,peak_mib,command
+mr_v1_baseline,1,4.155,2.562,327.3,hhlake.mr_skills --quiet --engine-name profile/mr_v1
+mr_v1_baseline,2,3.728,1.947,327.6,hhlake.mr_skills --quiet --engine-name profile/mr_v1
+mr_v1_baseline,3,3.468,1.824,329.1,hhlake.mr_skills --quiet --engine-name profile/mr_v1
+mr_v1_baseline,4,3.474,2.013,326.8,hhlake.mr_skills --quiet --engine-name profile/mr_v1
+mr_v1_baseline,5,3.687,2.147,329.3,hhlake.mr_skills --quiet --engine-name profile/mr_v1
+mr_v2_streaming,1,3.402,1.732,283.8,hhlake.mr_skills --quiet --engine-name profile/mr_v2 --streaming
+mr_v2_streaming,2,3.634,1.937,285.2,hhlake.mr_skills --quiet --engine-name profile/mr_v2 --streaming
+mr_v2_streaming,3,3.237,1.728,285.0,hhlake.mr_skills --quiet --engine-name profile/mr_v2 --streaming
+mr_v2_streaming,4,3.767,1.919,285.2,hhlake.mr_skills --quiet --engine-name profile/mr_v2 --streaming
+mr_v2_streaming,5,3.266,1.710,284.3,hhlake.mr_skills --quiet --engine-name profile/mr_v2 --streaming
+mr_v3_threads,1,2.698,1.114,63.5,hhlake.mr_skills --quiet --engine-name profile/mr_v3 --streaming --executor thread --workers 8 --chunk-mb 4
+mr_v3_threads,2,2.680,1.170,63.6,hhlake.mr_skills --quiet --engine-name profile/mr_v3 --streaming --executor thread --workers 8 --chunk-mb 4
+mr_v3_threads,3,3.027,1.459,63.8,hhlake.mr_skills --quiet --engine-name profile/mr_v3 --streaming --executor thread --workers 8 --chunk-mb 4
+mr_v3_threads,4,2.783,1.109,63.1,hhlake.mr_skills --quiet --engine-name profile/mr_v3 --streaming --executor thread --workers 8 --chunk-mb 4
+mr_v3_threads,5,2.741,1.193,63.6,hhlake.mr_skills --quiet --engine-name profile/mr_v3 --streaming --executor thread --workers 8 --chunk-mb 4
+mr_v4_prefilter,1,2.682,0.984,62.2,hhlake.mr_skills --quiet --engine-name profile/mr_v4 --streaming --executor thread --workers 8 --chunk-mb 4 --prefilter
+mr_v4_prefilter,2,2.755,1.070,63.1,hhlake.mr_skills --quiet --engine-name profile/mr_v4 --streaming --executor thread --workers 8 --chunk-mb 4 --prefilter
+mr_v4_prefilter,3,2.556,1.024,63.0,hhlake.mr_skills --quiet --engine-name profile/mr_v4 --streaming --executor thread --workers 8 --chunk-mb 4 --prefilter
+mr_v4_prefilter,4,3.040,1.362,62.7,hhlake.mr_skills --quiet --engine-name profile/mr_v4 --streaming --executor thread --workers 8 --chunk-mb 4 --prefilter
+mr_v4_prefilter,5,3.000,1.364,63.1,hhlake.mr_skills --quiet --engine-name profile/mr_v4 --streaming --executor thread --workers 8 --chunk-mb 4 --prefilter
+mr_v5_curated,1,2.073,0.431,60.3,hhlake.mr_skills --quiet --engine-name profile/mr_v5 --streaming --executor thread --workers 8 --chunk-mb 1 --prefilter --input-key curated/vacancies.ndjson
+mr_v5_curated,2,2.032,0.419,60.3,hhlake.mr_skills --quiet --engine-name profile/mr_v5 --streaming --executor thread --workers 8 --chunk-mb 1 --prefilter --input-key curated/vacancies.ndjson
+mr_v5_curated,3,1.918,0.426,60.3,hhlake.mr_skills --quiet --engine-name profile/mr_v5 --streaming --executor thread --workers 8 --chunk-mb 1 --prefilter --input-key curated/vacancies.ndjson
+mr_v5_curated,4,2.159,0.430,59.9,hhlake.mr_skills --quiet --engine-name profile/mr_v5 --streaming --executor thread --workers 8 --chunk-mb 1 --prefilter --input-key curated/vacancies.ndjson
+mr_v5_curated,5,2.264,0.415,60.1,hhlake.mr_skills --quiet --engine-name profile/mr_v5 --streaming --executor thread --workers 8 --chunk-mb 1 --prefilter --input-key curated/vacancies.ndjson
+duckdb_v1_raw,1,2.738,0.931,194.3,hhlake.duckdb_skills --quiet --engine-name profile/duckdb_v1
+duckdb_v1_raw,2,2.801,0.979,185.0,hhlake.duckdb_skills --quiet --engine-name profile/duckdb_v1
+duckdb_v1_raw,3,2.961,0.980,191.6,hhlake.duckdb_skills --quiet --engine-name profile/duckdb_v1
+duckdb_v1_raw,4,2.798,0.936,196.7,hhlake.duckdb_skills --quiet --engine-name profile/duckdb_v1
+duckdb_v1_raw,5,2.740,0.913,170.0,hhlake.duckdb_skills --quiet --engine-name profile/duckdb_v1
+duckdb_v2_parquet,1,1.994,0.233,96.3,hhlake.duckdb_skills --quiet --engine-name profile/duckdb_v2 --source curated
+duckdb_v2_parquet,2,2.222,0.266,96.5,hhlake.duckdb_skills --quiet --engine-name profile/duckdb_v2 --source curated
+duckdb_v2_parquet,3,2.128,0.228,97.2,hhlake.duckdb_skills --quiet --engine-name profile/duckdb_v2 --source curated
+duckdb_v2_parquet,4,2.136,0.243,96.1,hhlake.duckdb_skills --quiet --engine-name profile/duckdb_v2 --source curated
+duckdb_v2_parquet,5,1.995,0.217,97.6,hhlake.duckdb_skills --quiet --engine-name profile/duckdb_v2 --source curated
